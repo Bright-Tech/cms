@@ -1,0 +1,40 @@
+.sidebar-container {
+  color: hsla(0, 0%, 100%, .7);
+  font-size: 0.875rem;
+  background-color: #2f4050;
+
+  .ivu-menu-dark {
+    background: transparent;
+
+    .ivu-menu-opened {
+      background: #293846;
+      border-left: 4px solid #19aa8d;
+
+    }
+    .ivu-menu-submenu {
+      .ivu-menu-submenu-title {
+        background: transparent;
+        &:hover {
+          background: #293846;
+        }
+      }
+      .ivu-menu-item-active {
+        background: transparent !important;
+
+        &:hover {
+          background: transparent !important;
+        }
+
+      }
+    }
+
+  }
+
+  .logo-container {
+    background: url('~assets/images/logo-bg.png');
+    height: 72px;
+    min-width: 199px;
+    margin-bottom: 0.5rem;
+  }
+
+}

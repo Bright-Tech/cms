@@ -1,0 +1,68 @@
+{
+    "name": "bright-tech/cms",
+    "description": "崇光CMS",
+    "keywords": ["崇光科技", "CMS"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.6.4",
+        "doctrine/dbal": "^2.5",
+        "intervention/image": "^2.3",
+        "laravel/framework": "5.5.*",
+        "laravel/passport": "^3.0",
+        "laravel/tinker": "~1.0",
+        "predis/predis": "^1.1",
+        "watson/validating": "^3.1",
+        "zizaco/entrust": "5.2.x-dev"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.4",
+        "fzaninotto/faker": "~1.4",
+        "laravel/dusk": "^1.0",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.7",
+        "xethron/migrations-generator": "^2.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta",
+            "php artisan optimize"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import "~bootstrap/scss/functions";
+
+$font-family-sans-serif: // Safari f    `or OS X and iOS (San Francisco)
+        -apple-system, "STHeiti Light",
+          // Chrome < 56 for OS X (San Francisco)
+        BlinkMacSystemFont,
+          // Windows
+        "Segoe UI", "Microsoft YaHei",
+          // Android
+        "Roboto",
+          // Basic web fallback
+        "Helvetica Neue", Arial, sans-serif,
+          // Emoji fonts
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+@function theme-color($key: "primary") {
+  @return map-get($font-colors, $key);
+}
+
+$font-color-primary: #676a6c;
+$primary: #1ab394 !default;
+
+$font-colors: ();
+$font-colors: map-merge((
+        "primary": $font-color-primary,
+        "hover": $primary
+), $font-colors);
+
+// Settings for the `<body>` element.
+
+$body-bg: #f3f3f4;
+$body-color: map-get($font-colors, "primary");
+
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";

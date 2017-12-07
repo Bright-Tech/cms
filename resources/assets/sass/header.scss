@@ -1,0 +1,34 @@
+@import "./variables";
+
+.main-header-container {
+
+  .navbar {
+    .navbar-toggler {
+      line-height: 1rem;
+      color: map-get($font-colors, "primary");
+      padding: 0px;
+      border: none;
+
+      &:hover{
+        background: transparent;
+        border: none;
+        color: map-get($font-colors, "hover");
+      }
+    }
+  }
+  .breadcrumb {
+    font-size: 0.85rem;
+    background-color: transparent;
+
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    font-size: 0.5rem;
+  }
+  .breadcrumb-item.active {
+    color: inherit;
+  }
+
+  .header-title-container {
+    background-color: #ffffff;
+  }
+}

@@ -1,0 +1,16 @@
+/**
+iview样式
+ */
+//引入iview主样式
+@import '~iview/src/styles/index.less';
+
+/**
+定制样式变量
+样式变量详情访问https://github.com/iview/iview/blob/master/src/styles/custom.less
+ */
+@primary-color: #1ab394;
+
+//修正select组件在modal下选项错位
+.ivu-modal .ivu-form .ivu-select-dropdown{
+  top:auto !important;
+}

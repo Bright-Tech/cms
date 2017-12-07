@@ -1,0 +1,556 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  //border-bottom: 1px solid #e7e7e7;
+  .nav-container{
+    padding-top: 30px;
+    border-radius: 0px;
+  }
+  .dropdown-menu{
+    border:none;
+    background-color:transparent;
+    .list-group-item{
+      background-color:#fff !important;
+      border:none;
+    }
+  };
+
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+.navbar-default .navbar-nav > li > a {
+  font-size: 15px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid transparent;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  border-bottom: 3px solid #e68905;
+  //color: #fff !important;
+  background-color: transparent;
+  //border-color: #337ab7;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  position: relative;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.navbar-light{
+  .open > a:focus {
+    color: #fff !important;
+  }
+  .nav-container{
+    border: none;
+  }
+
+  .navbar-nav > li > a {
+    color: #000;
+    font-size: 15px;
+  }
+  .navbar-nav > li > a:hover {
+    color: #000;
+    font-size: 15px;
+  }
+  .dropdown-menu > li > a{
+    color: #000 !important;
+    border-bottom: 3px solid transparent;
+    background-color: #fff;
+  }
+
+  .dropdown-menu > li > a:hover{
+    border-bottom: 3px solid #e68905;
+    color: #000 ;
+    background-color:transparent;
+  }
+
+}
+.navbar-dark{
+  .open > a:focus {
+    color: #000 !important;
+  }
+  border-bottom: 1px solid #e7e7e7;
+  .navbar-nav > li > a {
+    color: #4e4d4d !important;
+    font-size: 15px;
+  }
+  .dropdown-menu > li > a{
+    color: #000 !important;
+    border-bottom: 3px solid transparent;
+  }
+  .dropdown-menu > li > a:hover{
+    border-bottom: 3px solid #e68905;
+    color: #000 !important; ;
+    background-color:transparent;
+  }
+  .nav-container{
+    //border-bottom: 1px solid #e7e7e7;
+  }
+}
+
+.carousel .carousel-indicators .active {
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  background-color: #e68905;
+  filter: alpha(Opacity=100);
+  -moz-opacity: 1;
+  opacity: 1;
+  border: none;
+}
+.carousel .carousel-indicators li {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  filter: alpha(Opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.breadcrumb-box{
+  //position: relative;
+  margin-top: 100px;
+}
+.navbar-brand {
+  height: 60px;
+  float: left;
+  padding: 0px;
+  margin-left: -15px;
+  font-size: 18px;
+  line-height: 20px;
+}.navbar-brand > img {
+   display: block;
+   height: 30px;
+ }
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+@media (min-width: 768px){
+  .navbar-ths-dark .navbar-nav > li > a:hover, .navbar-ths-dark .navbar-nav > li > a:focus {
+    color: #fff;
+  }
+  .navbar-ths-dark .navbar-nav > li > a:hover, .navbar-ths-dark .navbar-nav > li > a:focus {
+    color: #4e4d4d;
+  }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    border-bottom: 3px solid #e68905;
+  }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-ths-dark .navbar-nav > li > a {
+    color: #fff;
+  }
+  .navbar-ths-dark .navbar-nav > li > a {
+    color: #4e4d4d;
+  }
+  .navbar-default .navbar-nav > li > a {
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid transparent;
+  }
+}
+
+.container-news {
+  border-top: 1px solid #cdcdcd;
+  padding-bottom: 30px;
+  background-color: #ebebeb;
+}
+.owl-carousel {
+  margin-bottom: 40px;
+}
+.breadcrumb{
+  background-color:transparent;
+  margin-top: 20px;
+}
+.navbar-default {
+  background-color: inherit;
+  border-color: inherit;
+}
+.footers {
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-top: -1px;
+  background-color: #2f2f2f;
+  color: #cbcbcb;
+  font-size: 12px;
+  width: 100%;
+}
+.share-bar {
+  background: #262626;
+  padding: 20px 0;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.container-news .list-group-item {
+  background-color: transparent;
+  padding: 15px 15px;
+  border-style: none none solid none;
+}
+.news-text {
+  margin-top: 50px;
+}
+.container-news .news-more a {
+  color: #464646;
+  font-family: 黑体;
+}
+.news-more a {
+  float: right;
+}
+.container-news .list-group-item a {
+  font-size: 16px;
+  color: #333333;
+  font-family: 黑体;
+}
+.news-top span {
+   margin-left: 12px;
+   font-size: 24px;
+   font-family: 黑体;
+}
+.row-pic{
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 64px;
+}
+.container-footer-messages .list-group .list-group-item {
+  background-color: transparent;
+  padding: 6px 6px;
+  border-style: none none none none;
+}
+.container-footer-messages .list-group .list-title {
+  font-weight: bold;
+}
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  border: 1px solid #ddd;
+}
+.container-footer-messages {
+  background-color: #ebebeb;
+  margin-top: 100px;
+  padding-top: 40px;
+}
+.container-footer-messages {
+  font-family: 微软雅黑;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.row-logo {
+  border-bottom: 1px solid #ddd;
+}
+.list-group .list-group-item img {
+  width: 90px;
+  height: 90px;
+}
+a {
+  color: #4e4d4d;
+  text-decoration: none;
+}
+.container-footer-messages .row-link {
+  margin-top: 10px;
+}
+.container-footer {
+  min-height: 100px;
+  background-color: #333333;
+}
+.container {
+  width: 1170px;
+}
+.col-sm-offset-4 {
+  margin-left: 33.33333333%;
+}
+.col-sm-5 {
+  width: 41.66666667%;
+}
+.footer-text {
+  color: #cccccc;
+  padding-top: 40px;
+  text-align: right;
+}
+.back-to-top {
+  position: absolute;
+  margin-top: 30px;
+  right: 15px;
+}
+.col-sm-1 {
+  width: 8.33333333%;
+}
+.footer-logo {
+  margin-top: 30px;
+}
+.col-sm-3 {
+  width: 25%;
+}
+.container-content .content-title {
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.container-content .content-title p {
+  text-align: center;
+  font-family: 微软雅黑;
+  color: #e3921f;
+  font-size: 18px;
+  margin: 0px;
+}
+.container-content .content-title .container-created {
+  color: #939393;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+//搜索框样式
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #e7e7e7;
+}
+
+
+.navbar-right ~ .navbar-right {
+  margin-right: 0;
+}
+
+.navbar-right {
+  float: right !important;
+  margin-right: -15px;
+}
+
+.navbar-form {
+  width: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.navbar-wrapper{
+  .form-group {
+    .form-control {
+      border: none;
+      border-radius: 18px;
+      height: 20px;
+      padding-bottom: 0px;
+      padding-top: 0px;
+      padding-right: 25px;
+      width: 150px;
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.175) inset;
+    }
+  }
+
+
+}
+.navbar-light .form-control {
+  background-color: #f3f3f3;
+}
+.navbar-dark .form-control {
+  background-color: #f3f3f3;
+}
+.navbar-form {
+  width: auto;
+  padding-top: 0;
+  margin-top: 11px;
+  padding-bottom: 0;
+  margin-left: 0;
+  border: 0;
+  box-shadow: none;
+
+
+  .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .button-feedback {
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    border: none;
+    left: -29px;
+    top: 1px;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+  }
+}
+
+
+//列表样式
+.panel-group .panel-default {
+  background-color: transparent;
+  padding: 10px 0px;
+  border-style: none none solid none;
+}
+.panel-group .panel {
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+.panel-default {
+  border-color: #ddd !important;
+}
+.panel {
+  border: 1px solid transparent;
+}
+.panel-group .panel-default .panel-heading {
+  background-color: transparent;
+  padding: 12px 0px;
+}
+.panel-default > .panel-heading {
+  /* color: #333; */
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+.panel-group .panel-heading {
+  border-bottom: 0;
+}
+.panel-group .panel-heading > h4 > a:hover, .panel-group .panel-heading > h4 > a:focus {
+  color: #e3921f;
+  outline: none;
+}
+.navbar-right {
+  float: right !important;
+  margin-right: -15px;
+}
+.carousel .carousel-control img {
+  position: absolute;
+  top: 40%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -10px;
+  max-height: 50%;
+}

@@ -1,0 +1,53 @@
+@import "~bootstrap/scss/mixins";
+@import "./variables";
+
+body {
+  color: map-get($font-colors, "primary");
+}
+
+a {
+  color: map-get($font-colors, "primary");
+
+  &:hover, &:focus, &:visited {
+    color: map-get($font-colors, "primary");
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.border-bottom{
+  border-bottom: 1px solid #e7eaec !important;
+}
+
+.main-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.body-container {
+  height: 100%;
+  overflow: auto;
+  transition: all .3s ease;
+}
+
+
+.sidebar-container {
+  @include float-left;
+  width: 12.5rem;
+  height: 100%;
+  overflow: auto;
+}
+
+/**
+ * Border shadow
+ */
+
+.border-shadow-bottom{
+  box-shadow: 0 2px 1px 1px hsla(0,0%,39%,.1)
+}
+
+.img-container {
+  margin-top: 10px;
+}

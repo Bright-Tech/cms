@@ -1,0 +1,49 @@
+build_settings:
+  verbose: true
+  ignore:
+    - "vendor"
+    - "node_modules"
+    - "bootstrap"
+    - "storage"
+    - "public" # If there are any PHP files in here, we didn't write them.
+    - "app/Console/Kernel.php"
+    - "app/Exceptions/Handler.php"
+    - "database"
+
+setup:
+  composer:
+    action: "install"
+
+test:
+  php_parallel_lint:
+  php_mess_detector:
+    allowed_warnings: 0
+    rules:
+      - "controversial"
+      - "codesize"
+      - "design"
+      - "naming"
+      - "unusedcode"
+  php_code_sniffer:
+    standard: "PSR2"
+    allowed_warnings: 0
+    allowed_errors: 0
+    ignore:
+      - "vendor"
+      - "node_modules"
+      - "bootstrap"
+      - "storage"
+      - "public"
+      - "app/Console/Kernel.php"
+      - "app/Exceptions/Handler.php"
+      - "database"
+      - "resources/views"
+#  php_loc:
+#  php_unit:
+  php_docblock_checker:
+    allowed_warnings: 0
+
+#broken:
+#  email:
+#    committer: true
+#    cc: ["php-ci@googlegroups.com"]
